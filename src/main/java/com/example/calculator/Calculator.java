@@ -11,8 +11,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
 public class Calculator {
-    private HBox root;
-    private ButtonHandler bh = new ButtonHandler();
+    private final HBox root;
     Button minus, plus, divide, multiply;
 
     public Calculator() {
@@ -120,6 +119,7 @@ public class Calculator {
                 }
         );
 
+        ButtonHandler bh = new ButtonHandler();
         plus.setOnAction(bh);
         minus.setOnAction(bh);
         multiply.setOnAction(bh);
